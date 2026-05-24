@@ -1,0 +1,72 @@
+{
+  "name": "Tubetune — Your YouTube & Podcast Library",
+  "short_name": "Tubetune",
+  "description": "Your personal music and podcast library. Build playlists from YouTube and podcast RSS feeds.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["music", "entertainment"],
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "shortcuts": [
+    {
+      "name": "Play Liked Songs",
+      "short_name": "Liked",
+      "description": "Jump into your Liked Songs",
+      "url": "/?shortcut=liked",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Podcasts",
+      "short_name": "Podcasts",
+      "description": "Open your podcast episodes",
+      "url": "/?shortcut=podcasts",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Add YouTube",
+      "short_name": "Add",
+      "description": "Paste a YouTube link",
+      "url": "/?shortcut=add",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+tubetune",
+      "url": "/share?url=%s"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
